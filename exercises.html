@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercises</title>
+</head>
+<body>
+    <button onclick="calculation += '1'; console.log(calculation);">1</button>
+    <button onclick="calculation += '2'; console.log(calculation);">2</button>
+    <button onclick="calculation += '3'; console.log(calculation);">3</button>
+    <button onclick="calculation += ' + '; console.log(calculation);">+</button>
+    <button onclick="calculation = eval(calculation); console.log(calculation);">=</button>
+
+    <script>
+        var name = "Aristotle";
+        console.log(`My name is: ${name}`);
+
+        var cost = ((1 * 5) + (2 * 3) + (1 * 9));
+        console.log(cost);
+        console.log(`Cost of food: $${cost}`);
+
+        var tax = cost * 0.1;
+        console.log(tax);
+        console.log(`Total (10%): $${tax}`);
+
+        var totalCost = cost + tax;
+        console.log(`Total ocst: $${totalCost}`);
+
+        let calculation = '';
+    </script>
+</body>
+</html>
