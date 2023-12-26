@@ -6,17 +6,24 @@
     <title>Document</title>
 </head>
 <body>
+                        <!--YOUTUBE SUBSCRIBE BUTTON-->
     <p>YouTube Subscribe Button</p>
+    
     <button onclick="subscribe();" class="js-subscribe-button">Subscribe
     </button>
 
+                        <!--AMAZON CALCULATOR-->
     <p>Amazon Shipping Calculator</p>
+    
     <input placeholder="Cost of Order" class="js-cost-input" onkeydown="handleCostKeyDown(event);">
+    
     <button onclick="calculateTotal();">Calculate</button>
 
     <p class="js-total-cost"></p>
 
     <script>
+
+/* JS FOR AMAZON CALCULATOR */
         function handleCostKeyDown(event) {
             if (event.key === 'Enter') {
                 calculateTotal();
@@ -34,6 +41,7 @@
             document.querySelector('.js-total-cost').innerHTML = `$${cost}`;
         }
 
+/* JS FOR YOUTUBE SUBSCRIBE BUTTON */
         function subscribe() {
             const buttonElement = document.querySelector('.js-subscribe-button');
     
