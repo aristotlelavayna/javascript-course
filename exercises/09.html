@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button>9a</button>
+    <button class="b-9">9b</button>
+
+                <!--9c-->
+    <button onclick="document.querySelector('.choice').innerHTML = 'you chose: heads';">heads</button>
+
+    <button onclick="document.querySelector('.choice').innerHTML = 'you chose: tails';">tails</button>
+    
+    <p class="choice"></p>
+
+                <!--9d-->
+    <input placeholder="name" class="name-input"
+        onkeydown="
+        if (event.key === 'Enter') {
+            displayMessage();
+        }
+    ">
+
+    <button onclick="
+        const inputElement = document.querySelector('.name-input');
+        document.querySelector('.message').innerHTML = `your name is ${inputElement.value}`;
+    ">submit</button>
+
+    <p class="message"></p>
+
+                <!---9h-->
+    <input placeholder="type anything" class="input"
+        onkeyup="
+        const inputElement = document.querySelector('.input');
+        document.querySelector('.js-message').innerHTML = inputElement.value;
+        "
+    >
+
+    <p class="js-message"></p>
+
+    <script>
+        function displayMessage() {
+            const inputElement = document.querySelector('.name-input');
+        document.querySelector('.message').innerHTML = `your name is: ${inputElement.value}`;
+        }
+
+
+        console.log(document.querySelector('button'));
+        document.querySelector('.b-9').innerHTML = '9b done!';
+    </script>
+</body>
+</html>
