@@ -6,7 +6,7 @@
     <title>Document</title>
 </head>
 <body>
-    <button class="js-button" onclick="updateButton();">Start</button>
+    <button class="js-button">Start</button>
 
     <button onclick="displayMessage();">Add to cart
     </button>
@@ -24,7 +24,7 @@
     ">Remove</button>
 
     <script>
-        /* const add = function () {
+        const add = function () {
             console.log(2 + 3);
         };
         add();
@@ -39,17 +39,26 @@
             console.log('12b');
         })
 
-        runTwice(add); */
+        runTwice(add);
 
-        function updateButton() {
+        /* function updateButton() {
             const button = document.querySelector('.js-button');
 
             button.innerHTML = 'Loading...';
 
-            setTimeout(function () {
+            setTimeout(() => {
                 button.innerHTML = 'Finished!';
             }, 1000);
-        }
+        } */
+
+        document.querySelector('.js-button')
+        .addEventListener('click', () => {
+            const button = document.querySelector('.js-button');
+
+            setTimeout(() => {
+                button.innerHTML = 'Finished!';
+            }, 1000);
+        })
 
         let timeoutId;
 
@@ -59,7 +68,7 @@
 
             clearTimeout(timeoutId);
 
-            timeoutId = setTimeout(function () {
+            timeoutId = setTimeout(() => {
                 messageElement.innerHTML = '';
             }, 2000)
         }
@@ -79,7 +88,7 @@
 
         isDisplayingNotification = true;
 
-        intervalId = setInterval(function() {
+        intervalId = setInterval(() => {
             if (document.title === 'App') {
             document.title = `(${messages}) New messages`;
             } else {
